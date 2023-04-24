@@ -38,13 +38,13 @@
     Person  <|-- Member
     Member <|-- BoardMember
 
-    Location -o AAUOC
-    Event -o AAUOC
-    Person -o AAUOC
+    Location "0..*" -o AAUOC
+    Event "0..*" -o AAUOC
+    Person "0..*" -o AAUOC
 
-    Location -- Event
-    Member -- Event
-    Person -- Conference
-    BoardMember -- BoardMeeting
+    Location "1" -- "0..*" Event : isLocated in
+    Member "0..*" -- "0..*" Event : attendsTo
+    Person "0..*" -- "0..*" Conference : attendsTo
+    BoardMember "0..*" -- "0..*" BoardMeeting   : attendsTo
 
 @enduml
