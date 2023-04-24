@@ -1,4 +1,25 @@
 @startuml
 
+    class Member {
+
+    }
+    class BoardMember {
+
+        }
+    class Person {
+
+            }
+    class Event {
+
+        }
+    class Conference {
+
+        }
+    class BoardMeeting {
+
+        }
+    class Location {
+
+        }
 
 @enduml
